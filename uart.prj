@@ -1,0 +1,3 @@
+verilog work "uart_tx.v"
+verilog work "speed_select.v"
+verilog work "uart.v"

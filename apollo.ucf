@@ -1,0 +1,37 @@
+NET "clk"  LOC = T7 | IOSTANDARD = LVCMOS33;
+NET "rst_n"  LOC = H15 | IOSTANDARD = LVCMOS33;   #S0
+
+#AD10
+#NET "ad_clk"  		 LOC = P11 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[0]"  	 LOC = T15 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[1]"  	 LOC = R16	 	| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[2]"  	 LOC = T14 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[3]"  	 LOC = R15	 	| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[4]"  	 LOC = M13	 	| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[5]"  	 LOC = R14	 	| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[6]"  	 LOC = R12	 	| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[7]"  	 LOC = T13 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[8]"  	 LOC = T12 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+#NET "ad_data[9]"  	 LOC = P12 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+
+#NET "bit_data"  		 LOC = R5 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
+
+#AD8
+#NET "out_ad_clk"  		   LOC = D12 		| IOSTANDARD = LVTTL;
+#NET "in_ad_data[0]"  	 	LOC = A10 		| IOSTANDARD = LVTTL;
+#NET "in_ad_data[1]"  		LOC = B10	 	| IOSTANDARD = LVTTL;
+#NET "in_ad_data[2]"  	 	LOC = C10 		| IOSTANDARD = LVTTL;
+#NET "in_ad_data[3]"  		LOC = A11	 	| IOSTANDARD = LVTTL;
+#NET "in_ad_data[4]"  		LOC = C11	 	| IOSTANDARD = LVTTL;
+#NET "in_ad_data[5]"  		LOC = D11	 	| IOSTANDARD = LVTTL;
+#NET "in_ad_data[6]"  		LOC = A12	 	| IOSTANDARD = LVTTL;
+#NET "in_ad_data[7]"  		LOC = B12 		| IOSTANDARD = LVTTL;
+
+#ÊýÂë¹Ü
+NET "SftClk"  		LOC = H13 	| IOSTANDARD = LVCMOS33;
+NET "LchClk"  	 	LOC = H14 	| IOSTANDARD = LVCMOS33;
+NET "SDout"  		LOC = J14	| IOSTANDARD = LVCMOS33;
+
+#uart
+NET "rs232_tx" 	LOC = M14  | IOSTANDARD  = LVTTL;
+NET "rs232_rx" 	LOC = N14  | IOSTANDARD  = LVTTL;
