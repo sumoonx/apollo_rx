@@ -23,9 +23,11 @@ module apollo_top(
    input rst_n,
 	input rs232_rx,	// RS232接收数据信号
 	output rs232_tx,	//	RS232发送数据信号
+	input[7:0] in_ad_data,
+	output out_ad_clk,
 	output Sftclk,
-	 output Lchclk,
-	 output SDout
+	output Lchclk,
+	output SDout
     );
 
 wire[7:0] tx_in;
@@ -49,6 +51,7 @@ wire recv_rst;
 
 wire [7:0] scode;
 wire scode_rdy;
+wire [7:0] level;
 controller controller(	.clk(clk),
 								.rst_n(rst_n),
 								.rx_out(rx_out),
@@ -60,7 +63,8 @@ controller controller(	.clk(clk),
 								.recv_clk(recv_clk),
 								.recv_rst(recv_rst),
 								.scode(scode),
-								.scode_rdy(scode_rdy)
+								.scode_rdy(scode_rdy),
+								.level(level)
 								);
 
 segment_driver segment(	.clk(clk),
@@ -71,4 +75,20 @@ segment_driver segment(	.clk(clk),
 								.Lchclk(Lchclk),
 								.SDout(SDout));
 
+wire[7:0] ad_data_in;
+wire ad_data_rdy;
+ad_driver ad_driver(	.clk(recv_clk),
+							.rst_n(recv_rst),
+							.din(in_ad_data),
+							.clk_out(out_ad_clk),
+							.dout(ad_data_in),
+							.ready(ad_data_rdy));
+
+receiver receiver(	.clk(recv_clk),
+							.rst_n(recv_rst),
+							.level(level),
+							.din(ad_data_in),
+							.den(ad_data_rdy),
+							.dout(recv_in),
+							.drdy(recv_write));
 endmodule

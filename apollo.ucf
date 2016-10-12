@@ -17,15 +17,15 @@ NET "rst_n"  LOC = H15 | IOSTANDARD = LVCMOS33;   #S0
 #NET "bit_data"  		 LOC = R5 		| IOSTANDARD = LVCMOS33 | slew = slow | drive = 4;
 
 #AD8
-#NET "out_ad_clk"  		   LOC = D12 		| IOSTANDARD = LVTTL;
-#NET "in_ad_data[0]"  	 	LOC = A10 		| IOSTANDARD = LVTTL;
-#NET "in_ad_data[1]"  		LOC = B10	 	| IOSTANDARD = LVTTL;
-#NET "in_ad_data[2]"  	 	LOC = C10 		| IOSTANDARD = LVTTL;
-#NET "in_ad_data[3]"  		LOC = A11	 	| IOSTANDARD = LVTTL;
-#NET "in_ad_data[4]"  		LOC = C11	 	| IOSTANDARD = LVTTL;
-#NET "in_ad_data[5]"  		LOC = D11	 	| IOSTANDARD = LVTTL;
-#NET "in_ad_data[6]"  		LOC = A12	 	| IOSTANDARD = LVTTL;
-#NET "in_ad_data[7]"  		LOC = B12 		| IOSTANDARD = LVTTL;
+NET "out_ad_clk"  		   LOC = D12 		| IOSTANDARD = LVTTL;
+NET "in_ad_data[0]"  	 	LOC = A10 		| IOSTANDARD = LVTTL;
+NET "in_ad_data[1]"  		LOC = B10	 	| IOSTANDARD = LVTTL;
+NET "in_ad_data[2]"  	 	LOC = C10 		| IOSTANDARD = LVTTL;
+NET "in_ad_data[3]"  		LOC = A11	 	| IOSTANDARD = LVTTL;
+NET "in_ad_data[4]"  		LOC = C11	 	| IOSTANDARD = LVTTL;
+NET "in_ad_data[5]"  		LOC = D11	 	| IOSTANDARD = LVTTL;
+NET "in_ad_data[6]"  		LOC = A12	 	| IOSTANDARD = LVTTL;
+NET "in_ad_data[7]"  		LOC = B12 		| IOSTANDARD = LVTTL;
 
 #ÊýÂë¹Ü
 NET "SftClk"  		LOC = H13 	| IOSTANDARD = LVCMOS33;

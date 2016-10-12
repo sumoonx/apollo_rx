@@ -21,17 +21,17 @@
 module controller(
     input clk,
     input rst_n,
-    input [7:0] rx_out,
-    input rx_over,
-	 input [7:0] recv_in,
-	 input recv_write,
-    output [7:0] tx_in,
-    output tx_write,
-	 output recv_clk,
-	 output recv_rst,
-	 output [7:0] scode,
-	 output scode_rdy,
-	 output [7:0]level
+    input [7:0] rx_out,		//get data from the uart/serial
+    input rx_over,			//date ready from the uart/serial
+	 input [7:0] recv_in,	//get data from the receiver module
+	 input recv_write,	//data ready from the receiver module
+    output [7:0] tx_in,	//write data to the uart/serial
+    output tx_write,		//write enable for the uart/serial
+	 output recv_clk,		//generated receiver module clk
+	 output recv_rst,		//generated receiver module rst_n
+	 output [7:0] scode,	//status code
+	 output scode_rdy,	//positive edged valid the status code
+	 output [7:0]level	//judge level for the decode module
     );
 
 parameter CMD_RESET = 1;
@@ -64,7 +64,7 @@ assign rx_over_pos = ~rx_over_r & rx_over;
 
 //----------------------------------------------
 reg recv_en;	//记录接收端开启状态
-reg silence_r;	//记录是否沉默接收端输出
+reg ctr_out;	//记录是否沉默接收端输出
 reg recv_rst_r;	//给接收端的重置信号
 
 reg[3:0] para_cnt;	//读取参数
@@ -85,7 +85,7 @@ reg tx_write_r;
 always @ (posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 		recv_en <= 1'b0;
-		silence_r <= 1'b0;
+		ctr_out <= 1'b0;
 		recv_rst_r <= 1'b1;
 		level_r <= 8'd127;
 		para_cnt <= 4'd0;
@@ -101,6 +101,7 @@ always @ (posedge clk or negedge rst_n) begin
 		case(state)
 			STATE_IDLE: begin
 				tx_write_r <= 1'b0;
+				ctr_out <= 1'b0;
 				//scode_r <= 8'd0;
 				scode_rdy_r <= 1'd0;
 				if (rx_over_pos) begin
@@ -144,10 +145,11 @@ always @ (posedge clk or negedge rst_n) begin
 				end
 			STATE_STATUS: begin
 					//state <= STATE_STATUS;
+					ctr_out <= 1'b1;
 					out_cnt <= out_cnt - 16'd1;
 					if (out_cnt == 16'd20000) tx_write_r <= 1'b0;
 					else if (out_cnt == 16'd19998) begin
-							tx_in_r <= {6'd0, recv_en, silence_r};
+							tx_in_r <= {6'd0, recv_en, ctr_out};
 							tx_write_r <= 1'b1;
 						end
 					else if (out_cnt == 16'd10008) begin
@@ -184,23 +186,25 @@ always @ (posedge clk or negedge rst_n) begin
 								recv_rst_r <= 1'b1;
 							end
 						STATE_ON: begin
+								ctr_out <= 1'b1;
 								if (recv_en == 1'b1) tx_in_r <= 8'd1;
 								else tx_in_r <= 8'd2;
 								tx_write_r <= 1'b1;
 							end
 						STATE_OFF: begin
+								ctr_out <= 1'b1;
 								if (recv_en == 1'b0) tx_in_r <= 8'd1;
 								else tx_in_r <= 8'd2;
 								tx_write_r <= 1'b1;
 							end
-						STATE_STATUS: begin
+						STATE_STATUS: begin	//no output
 								if (recv_en == 1'b1) tx_in_r <= 8'd1;
 								else tx_in_r <= 8'd2;
 								tx_write_r <= 1'b1;
 							end
 						STATE_SILENCE: begin
-								if (para_buf == 8'd1) silence_r <= 1'b1;
-								else silence_r <= 1'b0;
+								if (para_buf == 8'd1) ctr_out <= 1'b1;
+								else ctr_out <= 1'b0;
 							end
 						STATE_LEVEL: begin
 								tx_in_r <= 8'd1;
@@ -222,8 +226,8 @@ always @ (posedge clk or negedge rst_n) begin
 		end
 end
 
-assign tx_in = tx_in_r;
-assign tx_write = tx_write_r;
+assign tx_in = ctr_out ? tx_in_r : recv_in;
+assign tx_write = ctr_out ? tx_write_r : recv_write;
 
 assign recv_rst = recv_rst_r;
 assign recv_clk = clk & recv_en;

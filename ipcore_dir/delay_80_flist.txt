@@ -1,0 +1,15 @@
+# Output products list for <delay_80>
+_xmsgs\pn_parser.xmsgs
+delay_80.asy
+delay_80.gise
+delay_80.ngc
+delay_80.sym
+delay_80.v
+delay_80.veo
+delay_80.xco
+delay_80.xise
+delay_80\doc\c_shift_ram_v11_0_readme.txt
+delay_80\doc\c_shift_ram_v11_0_vinfo.html
+delay_80\doc\ds228_shift_ram.pdf
+delay_80_flist.txt
+delay_80_xmdf.tcl

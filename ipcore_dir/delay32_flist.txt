@@ -1,0 +1,15 @@
+# Output products list for <delay32>
+_xmsgs\pn_parser.xmsgs
+delay32.asy
+delay32.gise
+delay32.ngc
+delay32.sym
+delay32.v
+delay32.veo
+delay32.xco
+delay32.xise
+delay32\doc\c_shift_ram_v11_0_readme.txt
+delay32\doc\c_shift_ram_v11_0_vinfo.html
+delay32\doc\ds228_shift_ram.pdf
+delay32_flist.txt
+delay32_xmdf.tcl

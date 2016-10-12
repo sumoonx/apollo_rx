@@ -1,0 +1,15 @@
+# Output products list for <delay_64>
+_xmsgs\pn_parser.xmsgs
+delay_64.asy
+delay_64.gise
+delay_64.ngc
+delay_64.sym
+delay_64.v
+delay_64.veo
+delay_64.xco
+delay_64.xise
+delay_64\doc\c_shift_ram_v11_0_readme.txt
+delay_64\doc\c_shift_ram_v11_0_vinfo.html
+delay_64\doc\ds228_shift_ram.pdf
+delay_64_flist.txt
+delay_64_xmdf.tcl
