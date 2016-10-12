@@ -1,4 +1,0 @@
-verilog work "uart_tx.v"
-verilog work "uart_rx.v"
-verilog work "speed_select.v"
-verilog work "my_uart.v"

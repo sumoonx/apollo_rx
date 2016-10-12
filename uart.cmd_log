@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/uart.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/uart.syr" 
