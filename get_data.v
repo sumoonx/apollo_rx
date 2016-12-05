@@ -30,27 +30,27 @@ module get_data(
    output drdy
    );
 
-parameter HEAD = 8'b0000_1111;
-parameter TAIL = 8'b1111_0000;
+parameter HEAD = 4'b1100;
+parameter TAIL = 4'b0011;
 
-reg[95:0] bbuf;
+reg[87:0] bbuf;
 always @ (posedge clk or negedge rst_n)
 	if(!rst_n) bbuf <= 0;
-	else if (ben) bbuf <= {bbuf[94:0], bin};
+	else if (ben) bbuf <= {bbuf[86:0], bin};
 
 wire[15:0] uid_m;
-manchester huid_manchester(	.din(bbuf[23:8]),
-										.dout(uid_m[7:0]));
-manchester luid_manchester(	.din(bbuf[39:24]),
+manchester huid_manchester(	.din(bbuf[83:68]),
 										.dout(uid_m[15:8]));
+manchester luid_manchester(	.din(bbuf[67:52]),
+										.dout(uid_m[7:0]));
 wire[7:0] zid_m;
-manchester zid_manchester(	.din(bbuf[55:40]),
+manchester zid_manchester(	.din(bbuf[51:36]),
 									.dout(zid_m));
 wire[7:0] cnt_m;
-manchester cnt_manchester(	.din(bbuf[71:56]),
+manchester cnt_manchester(	.din(bbuf[19:4]),
 									.dout(cnt_m));
 wire[7:0] type_m;
-manchester type_manchester(	.din(bbuf[87:72]),
+manchester type_manchester(	.din(bbuf[35:20]),
 										.dout(type_m));
 
 reg[15:0] uid_r;
@@ -67,7 +67,7 @@ always @ (posedge clk or negedge rst_n) begin
 		drdy_r <= 0;
 	end
 	else if (ben) begin
-		if ((bbuf[7:0] == HEAD) && (bbuf[95:88] == TAIL)) begin
+		if ((bbuf[87:84] == HEAD) && (bbuf[3:0] == TAIL)) begin
 			uid_r <= uid_m;
 			zid_r <= zid_m;
 			cnt_r <= cnt_m;

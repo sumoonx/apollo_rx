@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.68d
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.68d
+DATE            12/05/2016 - 20:14
+SOURCE          E:\Workspace\CompanyProjects\VLC\apollo_rx\apollo.mcs
+DEVICE          8192K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x7365B1CC
+START_ADDRESS   0x00000000 END_ADDRESS 0x000C3AB5 DIRECTION_UP   "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.bit" 6slx25ftg256

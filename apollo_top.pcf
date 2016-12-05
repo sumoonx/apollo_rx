@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.68d on Mon Dec 05 20:06:04 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T7" LEVEL 1;
+COMP "in_ad_data<0>" LOCATE = SITE "A10" LEVEL 1;
+COMP "in_ad_data<1>" LOCATE = SITE "B10" LEVEL 1;
+COMP "in_ad_data<2>" LOCATE = SITE "C10" LEVEL 1;
+COMP "in_ad_data<3>" LOCATE = SITE "A11" LEVEL 1;
+COMP "in_ad_data<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "in_ad_data<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "in_ad_data<6>" LOCATE = SITE "A12" LEVEL 1;
+COMP "in_ad_data<7>" LOCATE = SITE "B12" LEVEL 1;
+COMP "SDout" LOCATE = SITE "J14" LEVEL 1;
+COMP "test1" LOCATE = SITE "P6" LEVEL 1;
+COMP "test2" LOCATE = SITE "P7" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "H15" LEVEL 1;
+COMP "out_ad_clk" LOCATE = SITE "D12" LEVEL 1;
+COMP "rs232_rx" LOCATE = SITE "N14" LEVEL 1;
+COMP "rs232_tx" LOCATE = SITE "M14" LEVEL 1;
+COMP "Lchclk" LOCATE = SITE "H14" LEVEL 1;
+COMP "Sftclk" LOCATE = SITE "H13" LEVEL 1;
+SCHEMATIC END;
+

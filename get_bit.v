@@ -27,10 +27,14 @@ module get_bit(
     );
 
 //待同步信号的比特率
-parameter BPS = 195_000;
+parameter BPS = 125_000;
 parameter BPS_CNT = 50000000/2/BPS/8;
 //parameter BPS_CNT = 256/16;
 
+reg[199:0] din_r;
+always @ (posedge clk or negedge rst_n)
+	if(!rst_n) din_r <= 0;
+	else din_r <= {din_r[198:0], din};
 
 //产生八倍于bps的时钟，供bit_synchronize模块使用
 reg clk_8th;		

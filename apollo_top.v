@@ -27,7 +27,9 @@ module apollo_top(
 	output out_ad_clk,
 	output Sftclk,
 	output Lchclk,
-	output SDout
+	output SDout,
+	output test1,
+	output test2
     );
 
 wire[7:0] tx_in;
@@ -90,5 +92,7 @@ receiver receiver(	.clk(recv_clk),
 							.din(ad_data_in),
 							.den(ad_data_rdy),
 							.dout(recv_in),
-							.drdy(recv_write));
+							.drdy(recv_write),
+							.test1(test1),
+							.test2(test2));
 endmodule

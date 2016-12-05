@@ -6,3 +6,644 @@ xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xs
 xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
 xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
 xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 
+xst -intstyle ise -ifn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.xst" -ofn "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc apollo.ucf -p xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd  
+map -intstyle ise -p xc6slx25-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apollo_top_map.ncd apollo_top.ngd apollo_top.pcf 
+par -w -intstyle ise -ol high -mt off apollo_top_map.ncd apollo_top.ncd apollo_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apollo_top.twx apollo_top.ncd -o apollo_top.twr apollo_top.pcf -ucf apollo.ucf 
+bitgen -intstyle ise -f apollo_top.ut apollo_top.ncd 

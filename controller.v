@@ -87,7 +87,7 @@ always @ (posedge clk or negedge rst_n) begin
 		recv_en <= 1'b0;
 		ctr_out <= 1'b0;
 		recv_rst_r <= 1'b1;
-		level_r <= 8'd127;
+		level_r <= 8'd100;
 		para_cnt <= 4'd0;
 		out_cnt <= 16'd0;
 		state <= STATE_IDLE;
@@ -100,10 +100,6 @@ always @ (posedge clk or negedge rst_n) begin
 	else begin
 		case(state)
 			STATE_IDLE: begin
-				tx_write_r <= 1'b0;
-				ctr_out <= 1'b0;
-				//scode_r <= 8'd0;
-				scode_rdy_r <= 1'd0;
 				if (rx_over_pos) begin
 					case(rx_out)
 						CMD_RESET: begin //ÉèÖÃrecv_rst
@@ -180,35 +176,45 @@ always @ (posedge clk or negedge rst_n) begin
 						state <= STATE_LEVEL;
 				end
 			STATE_RETURN: begin
-					state <= STATE_IDLE;
 					case(state_r)
 						STATE_RESET: begin
 								recv_rst_r <= 1'b1;
+								state <= STATE_RETURN;
 							end
 						STATE_ON: begin
 								ctr_out <= 1'b1;
 								if (recv_en == 1'b1) tx_in_r <= 8'd1;
 								else tx_in_r <= 8'd2;
 								tx_write_r <= 1'b1;
+								state <= STATE_RETURN;
 							end
 						STATE_OFF: begin
 								ctr_out <= 1'b1;
 								if (recv_en == 1'b0) tx_in_r <= 8'd1;
 								else tx_in_r <= 8'd2;
 								tx_write_r <= 1'b1;
+								state <= STATE_RETURN;
 							end
 						STATE_STATUS: begin	//no output
 								if (recv_en == 1'b1) tx_in_r <= 8'd1;
 								else tx_in_r <= 8'd2;
 								tx_write_r <= 1'b1;
+								state <= STATE_RETURN;
 							end
 						STATE_SILENCE: begin
 								if (para_buf == 8'd1) ctr_out <= 1'b1;
 								else ctr_out <= 1'b0;
+								state <= STATE_RETURN;
 							end
 						STATE_LEVEL: begin
 								tx_in_r <= 8'd1;
 								tx_write_r <= 1'b1;
+								state <= STATE_RETURN;
+							end
+						STATE_RETURN: begin
+								tx_write_r <= 1'b0;
+								scode_rdy_r <= 1'd0;
+								state <= STATE_IDLE;
 							end
 					endcase
 				end
@@ -225,6 +231,9 @@ always @ (posedge clk or negedge rst_n) begin
 		state_r <= state;
 		end
 end
+
+//assign tx_in = tx_in_r ;
+//assign tx_write = tx_write_r;
 
 assign tx_in = ctr_out ? tx_in_r : recv_in;
 assign tx_write = ctr_out ? tx_write_r : recv_write;

@@ -23,13 +23,13 @@ module manchester(
     output [7:0] dout
     );
 
-assign dout[7] = din[14] & (~din[15]);
-assign dout[6] = din[12] & (~din[13]);
-assign dout[5] = din[10] & (~din[11]);
-assign dout[4] = din[8] & (~din[9]);
-assign dout[3] = din[6] & (~din[7]);
-assign dout[2] = din[4] & (~din[5]);
-assign dout[1] = din[2] & (~din[3]);
-assign dout[0] = din[0] & (~din[1]);
+assign dout[7] = din[15] & (~din[14]);
+assign dout[6] = din[13] & (~din[12]);
+assign dout[5] = din[11] & (~din[10]);
+assign dout[4] = din[9] & (~din[8]);
+assign dout[3] = din[7] & (~din[6]);
+assign dout[2] = din[5] & (~din[4]);
+assign dout[1] = din[3] & (~din[2]);
+assign dout[0] = din[1] & (~din[0]);
 
 endmodule

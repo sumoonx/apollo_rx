@@ -74,6 +74,7 @@ always @ (posedge clk or negedge rst_n) begin
 	end
 end
 
+wire[7:0] laver;
 assign laver = lsum[13:6];
 //-----------------------------------------------
 assign high = bin & ben;
@@ -109,6 +110,7 @@ always @ (posedge clk or negedge rst_n) begin
 	end
 end
 
+wire[7:0] haver;
 assign haver = hsum[13:0];
 //----------------------------------------------
 reg[7:0] llv;
@@ -178,7 +180,11 @@ always @ (posedge clk or negedge rst_n) begin
 	end
 end
 
+wire[7:0] rssi_aver;
 assign rssi_aver = rsum[14:7];
+
+assign dout = rssi_aver;
+assign drdy = rssi_aver_rdy;
 
 //------------------------------------------------
 

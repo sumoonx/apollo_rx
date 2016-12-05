@@ -192,7 +192,7 @@ Elaborating module <SHIFT(SPI_LEN=4'b1000)>.
 WARNING:HDLCompiler:189 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\display.v" Line 139: Size mismatch in connection of port <RdData>. Formal port size is 8-bit while actual signal size is 1-bit.
 WARNING:HDLCompiler:1127 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\display.v" Line 139: Assignment to RdData ignored, since the identifier is never used
 WARNING:HDLCompiler:634 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\display.v" Line 138: Net <Miso> does not have a driver.
-WARNING:HDLCompiler:189 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\apollo_top.v" Line 72: Size mismatch in connection of port <bin>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\apollo_top.v" Line 74: Size mismatch in connection of port <bin>. Formal port size is 10-bit while actual signal size is 8-bit.
 
 Elaborating module <ad_driver>.
 
@@ -214,24 +214,18 @@ WARNING:HDLCompiler:634 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\bit_synchr
 Elaborating module <get_rssi>.
 
 Elaborating module <delay32>.
-WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 77: Result of 8-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 112: Result of 14-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 114: Result of 14-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <delay_64>.
-WARNING:HDLCompiler:1127 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 153: Assignment to rssi_aver_rdy ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 181: Result of 8-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 181: Assignment to rssi_aver ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" Line 52: Size mismatch in connection of port <dout>. Formal port size is 8-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" Line 53: Assignment to rssi_rdy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" Line 57: Assignment to rssi_rdy ignored, since the identifier is never used
 
 Elaborating module <get_data>.
 
 Elaborating module <manchester>.
 
 Elaborating module <frame_out>.
-WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\frame_out.v" Line 48: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\frame_out.v" Line 69: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:189 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" Line 84: Size mismatch in connection of port <rssi>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\frame_out.v" Line 66: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\frame_out.v" Line 76: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -353,9 +347,9 @@ Synthesizing Unit <controller>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
-    | Transitions        | 27                                             |
-    | Inputs             | 11                                             |
-    | Outputs            | 14                                             |
+    | Transitions        | 31                                             |
+    | Inputs             | 15                                             |
+    | Outputs            | 13                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst_n (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -363,7 +357,7 @@ Synthesizing Unit <controller>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <out_cnt[15]_GND_13_o_sub_12_OUT> created at line 149.
+    Found 16-bit subtractor for signal <out_cnt[15]_GND_13_o_sub_12_OUT> created at line 145.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  58 D-type flip-flop(s).
@@ -474,7 +468,7 @@ Synthesizing Unit <spi>.
     | Inputs             | 2                                              |
     | Outputs            | 3                                              |
     | Clock              | Clk (rising_edge)                              |
-    | Reset              | Rst_INV_83_o (positive)                        |
+    | Reset              | Rst_INV_84_o (positive)                        |
     | Reset type         | synchronous                                    |
     | Reset State        | 00                                             |
     | Encoding           | auto                                           |
@@ -518,24 +512,24 @@ Synthesizing Unit <receiver>.
         IDLE = 0
         CAL = 1
         OUT = 2
-INFO:Xst:3210 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" line 46: Output port <drdy> of the instance <get_rssi> is unconnected or connected to loadless signal.
-    Found 9-bit register for signal <data_rdy_r>.
-    Found 8-bit comparator greater for signal <bdata> created at line 36
+INFO:Xst:3210 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" line 50: Output port <drdy> of the instance <get_rssi> is unconnected or connected to loadless signal.
+    Found 20-bit register for signal <data_rdy_r>.
+    Found 8-bit comparator greater for signal <bdata> created at line 38
     Summary:
-	inferred   9 D-type flip-flop(s).
+	inferred  20 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <receiver> synthesized.
 
 Synthesizing Unit <get_bit>.
     Related source file is "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_bit.v".
-        BPS = 195000
-        BPS_CNT = 16
+        BPS = 125000
+        BPS_CNT = 25
     Found 22-bit register for signal <cnt>.
+    Found 1-bit register for signal <clk_8th>.
     Found 1-bit register for signal <syn_out_buf>.
     Found 1-bit register for signal <dout>.
     Found 1-bit register for signal <drdy>.
-    Found 1-bit register for signal <clk_8th>.
-    Found 22-bit adder for signal <cnt[21]_GND_23_o_add_1_OUT> created at line 49.
+    Found 22-bit adder for signal <cnt[21]_GND_23_o_add_2_OUT> created at line 53.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  26 D-type flip-flop(s).
@@ -620,12 +614,11 @@ Synthesizing Unit <get_rssi>.
         CAL = 1
         OUT = 2
 WARNING:Xst:647 - Input <den> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" line 145: Output port <q> of the instance <delay_64> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <dout> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <drdy> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 16-bit register for signal <lsum>.
     Found 16-bit register for signal <hsum>.
+    Found 16-bit register for signal <rsum>.
     Found 2-bit register for signal <hstate>.
+    Found 2-bit register for signal <rstate>.
     Found 2-bit register for signal <lstate>.
     Found 8-bit register for signal <llv>.
     Found 8-bit register for signal <hlv>.
@@ -634,6 +627,7 @@ WARNING:Xst:653 - Signal <drdy> is used but never assigned. This sourceless sign
     Found 1-bit register for signal <haver_rdy>.
     Found 1-bit register for signal <haver_rdy_r>.
     Found 1-bit register for signal <rssi_rdy>.
+    Found 1-bit register for signal <rssi_aver_rdy>.
     Found finite state machine <FSM_4> for signal <hstate>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
@@ -647,7 +641,20 @@ WARNING:Xst:653 - Signal <drdy> is used but never assigned. This sourceless sign
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found finite state machine <FSM_5> for signal <lstate>.
+    Found finite state machine <FSM_5> for signal <rstate>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_6> for signal <lstate>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 5                                              |
@@ -661,29 +668,31 @@ WARNING:Xst:653 - Signal <drdy> is used but never assigned. This sourceless sign
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 16-bit subtractor for signal <lsum[15]_GND_31_o_sub_1_OUT> created at line 60.
-    Found 16-bit subtractor for signal <hsum[15]_GND_31_o_sub_10_OUT> created at line 95.
-    Found 8-bit subtractor for signal <hlv[7]_llv[7]_sub_23_OUT> created at line 138.
+    Found 16-bit subtractor for signal <hsum[15]_GND_31_o_sub_11_OUT> created at line 96.
+    Found 8-bit subtractor for signal <hlv[7]_llv[7]_sub_25_OUT> created at line 140.
+    Found 16-bit subtractor for signal <rsum[15]_GND_31_o_sub_28_OUT> created at line 166.
     Found 16-bit adder for signal <lsum[15]_GND_31_o_add_3_OUT> created at line 66.
-    Found 16-bit adder for signal <hsum[15]_GND_31_o_add_12_OUT> created at line 101.
+    Found 16-bit adder for signal <hsum[15]_GND_31_o_add_13_OUT> created at line 102.
+    Found 16-bit adder for signal <rsum[15]_GND_31_o_add_30_OUT> created at line 172.
     Summary:
-	inferred   3 Adder/Subtractor(s).
-	inferred  60 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
-	inferred   2 Finite State Machine(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  77 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   3 Finite State Machine(s).
 Unit <get_rssi> synthesized.
 
 Synthesizing Unit <get_data>.
     Related source file is "E:\Workspace\CompanyProjects\VLC\apollo_rx\get_data.v".
-        HEAD = 8'b00001111
-        TAIL = 8'b11110000
+        HEAD = 4'b1100
+        TAIL = 4'b0011
     Found 16-bit register for signal <uid_r>.
     Found 8-bit register for signal <zid_r>.
     Found 8-bit register for signal <cnt_r>.
     Found 8-bit register for signal <type_r>.
-    Found 96-bit register for signal <bbuf>.
+    Found 88-bit register for signal <bbuf>.
     Found 1-bit register for signal <drdy_r>.
     Summary:
-	inferred 137 D-type flip-flop(s).
+	inferred 129 D-type flip-flop(s).
 Unit <get_data> synthesized.
 
 Synthesizing Unit <manchester>.
@@ -696,17 +705,23 @@ Synthesizing Unit <frame_out>.
     Related source file is "E:\Workspace\CompanyProjects\VLC\apollo_rx\frame_out.v".
         HEAD = 8'b11001010
         TAIL = 8'b11111110
-    Found 12-bit register for signal <ocnt>.
+        O_DURTION = 6000
+    Found 64-bit register for signal <frame_buf>.
+    Found 21-bit register for signal <ocnt>.
     Found 4-bit register for signal <fcnt>.
     Found 8-bit register for signal <dout_r>.
-    Found 64-bit register for signal <frame_buf>.
+    Found 1-bit register for signal <trans_start_r>.
     Found 1-bit register for signal <drdy_r>.
-    Found 12-bit subtractor for signal <GND_36_o_GND_36_o_sub_8_OUT<11:0>> created at line 48.
-    Found 4-bit subtractor for signal <GND_36_o_GND_36_o_sub_16_OUT<3:0>> created at line 69.
+    Found 1-bit register for signal <trans_start>.
+    Found 21-bit adder for signal <ocnt[20]_GND_36_o_add_8_OUT> created at line 66.
+    Found 4-bit adder for signal <fcnt[3]_GND_36_o_add_15_OUT> created at line 76.
+    Found 4-bit comparator lessequal for signal <GND_36_o_fcnt[3]_LessThan_1_o> created at line 43
+    Found 21-bit comparator greater for signal <ocnt[20]_GND_36_o_LessThan_8_o> created at line 66
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  89 D-type flip-flop(s).
-	inferred   5 Multiplexer(s).
+	inferred 100 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
 Unit <frame_out> synthesized.
 
 =========================================================================
@@ -716,24 +731,25 @@ Macro Statistics
 # RAMs                                                 : 3
  4x4-bit single-port Read Only RAM                     : 1
  8x26-bit single-port Read Only RAM                    : 2
-# Adders/Subtractors                                   : 27
- 12-bit subtractor                                     : 1
+# Adders/Subtractors                                   : 28
  13-bit adder                                          : 2
- 16-bit addsub                                         : 2
+ 16-bit addsub                                         : 3
  16-bit subtractor                                     : 1
+ 21-bit adder                                          : 1
  22-bit adder                                          : 1
  3-bit adder                                           : 2
- 4-bit adder                                           : 13
- 4-bit subtractor                                      : 2
+ 4-bit adder                                           : 14
+ 4-bit subtractor                                      : 1
  5-bit subtractor                                      : 1
  7-bit adder                                           : 1
  8-bit subtractor                                      : 1
-# Registers                                            : 108
- 1-bit register                                        : 53
+# Registers                                            : 112
+ 1-bit register                                        : 56
  10-bit register                                       : 1
- 12-bit register                                       : 1
  13-bit register                                       : 2
- 16-bit register                                       : 6
+ 16-bit register                                       : 7
+ 20-bit register                                       : 1
+ 21-bit register                                       : 1
  22-bit register                                       : 1
  26-bit register                                       : 2
  3-bit register                                        : 2
@@ -742,34 +758,34 @@ Macro Statistics
  64-bit register                                       : 1
  7-bit register                                        : 1
  8-bit register                                        : 18
- 9-bit register                                        : 1
- 96-bit register                                       : 1
+ 88-bit register                                       : 1
 # Latches                                              : 6
  1-bit latch                                           : 6
-# Comparators                                          : 16
+# Comparators                                          : 18
  13-bit comparator equal                               : 2
  13-bit comparator greater                             : 2
+ 21-bit comparator greater                             : 1
  32-bit comparator equal                               : 1
  4-bit comparator greater                              : 5
- 4-bit comparator lessequal                            : 4
+ 4-bit comparator lessequal                            : 5
  7-bit comparator greater                              : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 78
+# Multiplexers                                         : 80
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 27
- 12-bit 2-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 26
  13-bit 2-to-1 multiplexer                             : 2
- 16-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 4
+ 21-bit 2-to-1 multiplexer                             : 3
  22-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 6
- 4-bit 2-to-1 multiplexer                              : 18
+ 4-bit 2-to-1 multiplexer                              : 19
  4-bit 4-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 1
  7-bit 2-to-1 multiplexer                              : 3
- 8-bit 2-to-1 multiplexer                              : 14
+ 8-bit 2-to-1 multiplexer                              : 13
 # Tristates                                            : 1
  1-bit tristate buffer                                 : 1
-# FSMs                                                 : 4
+# FSMs                                                 : 5
 
 =========================================================================
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -784,8 +800,6 @@ Reading core <ipcore_dir/delay_64.ngc>.
 Reading Secure Unit <blk00000001>.
 Loading core <delay32> for timing and area information for instance <delay>.
 Loading core <delay_64> for timing and area information for instance <delay_64>.
-INFO:Xst:2261 - The FF/Latch <hlv_1> in Unit <get_rssi> is equivalent to the following 6 FFs/Latches, which will be removed : <hlv_2> <hlv_3> <hlv_4> <hlv_5> <hlv_6> <hlv_7> 
-INFO:Xst:2261 - The FF/Latch <llv_1> in Unit <get_rssi> is equivalent to the following 6 FFs/Latches, which will be removed : <llv_2> <llv_3> <llv_4> <llv_5> <llv_6> <llv_7> 
 WARNING:Xst:1710 - FF/Latch <uart_ctrl_r_0> (without init value) has a constant value of 0 in block <speed_rx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <uart_ctrl_r_2> (without init value) has a constant value of 1 in block <speed_rx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <uart_ctrl_r_1> (without init value) has a constant value of 0 in block <speed_rx>. This FF/Latch will be trimmed during the optimization process.
@@ -794,12 +808,19 @@ WARNING:Xst:1710 - FF/Latch <uart_ctrl_r_2> (without init value) has a constant 
 WARNING:Xst:1710 - FF/Latch <uart_ctrl_r_1> (without init value) has a constant value of 0 in block <speed_tx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <state_r_3> (without init value) has a constant value of 0 in block <controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <n_state_5> (without init value) has a constant value of 0 in block <my_binary2bcd>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <llv_1> (without init value) has a constant value of 0 in block <get_rssi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <hlv_1> (without init value) has a constant value of 0 in block <get_rssi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_rdy_r_9> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_10> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_11> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_12> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_13> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_14> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_15> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_16> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_17> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_18> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_19> of sequential type is unconnected in block <receiver>.
 WARNING:Xst:2404 -  FFs/Latches <state_r<3:3>> (without init value) have a constant value of 0 in block <controller>.
 WARNING:Xst:2404 -  FFs/Latches <n_state<5:5>> (without init value) have a constant value of 0 in block <binary2bcd>.
-WARNING:Xst:2404 -  FFs/Latches <llv<7:1>> (without init value) have a constant value of 0 in block <get_rssi>.
-WARNING:Xst:2404 -  FFs/Latches <hlv<7:1>> (without init value) have a constant value of 0 in block <get_rssi>.
 
 Synthesizing (advanced) Unit <Loop_Filter>.
 The following registers are absorbed into counter <ahead_count>: 1 register on signal <ahead_count>.
@@ -829,16 +850,12 @@ INFO:Xst:3231 - The small RAM <Mram__n0091> will be implemented on LUTs in order
     -----------------------------------------------------------------------
 Unit <display> synthesized (advanced).
 
-Synthesizing (advanced) Unit <frame_out>.
-The following registers are absorbed into counter <fcnt>: 1 register on signal <fcnt>.
-The following registers are absorbed into counter <ocnt>: 1 register on signal <ocnt>.
-Unit <frame_out> synthesized (advanced).
-
 Synthesizing (advanced) Unit <get_bit>.
 The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
 Unit <get_bit> synthesized (advanced).
 
 Synthesizing (advanced) Unit <get_rssi>.
+The following registers are absorbed into accumulator <rsum>: 1 register on signal <rsum>.
 The following registers are absorbed into accumulator <hsum>: 1 register on signal <hsum>.
 The following registers are absorbed into accumulator <lsum>: 1 register on signal <lsum>.
 Unit <get_rssi> synthesized (advanced).
@@ -869,6 +886,17 @@ Unit <uart_rx> synthesized (advanced).
 Synthesizing (advanced) Unit <uart_tx>.
 The following registers are absorbed into counter <num>: 1 register on signal <num>.
 Unit <uart_tx> synthesized (advanced).
+WARNING:Xst:2677 - Node <data_rdy_r_9> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_10> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_11> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_12> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_13> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_14> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_15> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_16> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_17> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_18> of sequential type is unconnected in block <receiver>.
+WARNING:Xst:2677 - Node <data_rdy_r_19> of sequential type is unconnected in block <receiver>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -877,44 +905,45 @@ Macro Statistics
 # RAMs                                                 : 3
  4x4-bit single-port distributed Read Only RAM         : 1
  8x26-bit single-port distributed Read Only RAM        : 2
-# Adders/Subtractors                                   : 12
+# Adders/Subtractors                                   : 14
+ 21-bit adder                                          : 1
  3-bit adder                                           : 1
- 4-bit adder                                           : 7
+ 4-bit adder                                           : 8
  4-bit subtractor                                      : 1
  5-bit subtractor                                      : 1
  7-bit adder                                           : 1
  8-bit subtractor                                      : 1
-# Counters                                             : 13
- 12-bit down counter                                   : 1
+# Counters                                             : 11
  13-bit up counter                                     : 2
  16-bit down counter                                   : 1
  22-bit up counter                                     : 1
  3-bit up counter                                      : 1
- 4-bit down counter                                    : 1
  4-bit up counter                                      : 6
-# Accumulators                                         : 2
- 16-bit updown accumulator                             : 2
-# Registers                                            : 516
- Flip-Flops                                            : 516
-# Comparators                                          : 16
+# Accumulators                                         : 3
+ 16-bit updown accumulator                             : 3
+# Registers                                            : 550
+ Flip-Flops                                            : 550
+# Comparators                                          : 18
  13-bit comparator equal                               : 2
  13-bit comparator greater                             : 2
+ 21-bit comparator greater                             : 1
  32-bit comparator equal                               : 1
  4-bit comparator greater                              : 5
- 4-bit comparator lessequal                            : 4
+ 4-bit comparator lessequal                            : 5
  7-bit comparator greater                              : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 67
+# Multiplexers                                         : 71
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 27
- 16-bit 2-to-1 multiplexer                             : 2
+ 1-bit 2-to-1 multiplexer                              : 26
+ 16-bit 2-to-1 multiplexer                             : 3
+ 21-bit 2-to-1 multiplexer                             : 3
  3-bit 2-to-1 multiplexer                              : 5
- 4-bit 2-to-1 multiplexer                              : 13
+ 4-bit 2-to-1 multiplexer                              : 15
  4-bit 4-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 1
  7-bit 2-to-1 multiplexer                              : 3
- 8-bit 2-to-1 multiplexer                              : 14
-# FSMs                                                 : 4
+ 8-bit 2-to-1 multiplexer                              : 13
+# FSMs                                                 : 5
 
 =========================================================================
 
@@ -964,7 +993,16 @@ Optimizing FSM <receiver/get_rssi/FSM_4> on signal <hstate[1:2]> with user encod
  10    | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <receiver/get_rssi/FSM_5> on signal <lstate[1:2]> with user encoding.
+Optimizing FSM <receiver/get_rssi/FSM_5> on signal <rstate[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <receiver/get_rssi/FSM_6> on signal <lstate[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -975,22 +1013,9 @@ Optimizing FSM <receiver/get_rssi/FSM_5> on signal <lstate[1:2]> with user encod
 WARNING:Xst:1293 - FF/Latch <bps_para_2_0> has a constant value of 0 in block <speed_select>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bps_para_12> has a constant value of 0 in block <speed_select>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <dat_7> (without init value) has a constant value of 1 in block <display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <lsum_7> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <lsum_8> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <lsum_9> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <lsum_10> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <lsum_11> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <lsum_12> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <lsum_13> of sequential type is unconnected in block <get_rssi>.
 WARNING:Xst:2677 - Node <lsum_14> of sequential type is unconnected in block <get_rssi>.
 WARNING:Xst:2677 - Node <lsum_15> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_1> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_2> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_3> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_4> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_5> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_6> of sequential type is unconnected in block <get_rssi>.
-WARNING:Xst:2677 - Node <hsum_7> of sequential type is unconnected in block <get_rssi>.
+WARNING:Xst:2677 - Node <rsum_15> of sequential type is unconnected in block <get_rssi>.
 WARNING:Xst:2677 - Node <hsum_8> of sequential type is unconnected in block <get_rssi>.
 WARNING:Xst:2677 - Node <hsum_9> of sequential type is unconnected in block <get_rssi>.
 WARNING:Xst:2677 - Node <hsum_10> of sequential type is unconnected in block <get_rssi>.
@@ -1012,7 +1037,6 @@ INFO:Xst:2261 - The FF/Latch <bps_para_2_5> in Unit <speed_select> is equivalent
 INFO:Xst:2261 - The FF/Latch <bps_para_2_6> in Unit <speed_select> is equivalent to the following FF/Latch, which will be removed : <bps_para_5> 
 INFO:Xst:2261 - The FF/Latch <bps_para_2_7> in Unit <speed_select> is equivalent to the following FF/Latch, which will be removed : <bps_para_6> 
 INFO:Xst:2261 - The FF/Latch <bps_para_2_1> in Unit <speed_select> is equivalent to the following FF/Latch, which will be removed : <bps_para_0> 
-INFO:Xst:2261 - The FF/Latch <rssi_1> in Unit <get_rssi> is equivalent to the following 6 FFs/Latches, which will be removed : <rssi_2> <rssi_3> <rssi_4> <rssi_5> <rssi_6> <rssi_7> 
 INFO:Xst:2261 - The FF/Latch <frame_buf_1> in Unit <frame_out> is equivalent to the following 6 FFs/Latches, which will be removed : <frame_buf_2> <frame_buf_3> <frame_buf_4> <frame_buf_5> <frame_buf_6> <frame_buf_7> 
 WARNING:Xst:2041 - Unit uart_tx: 1 internal tristate is replaced by logic (pull-up yes): bps_start_r.
 
@@ -1064,8 +1088,6 @@ Optimizing unit <clock_devide> ...
 Optimizing unit <get_data> ...
 
 Optimizing unit <frame_out> ...
-INFO:Xst:2261 - The FF/Latch <frame_buf_9> in Unit <frame_out> is equivalent to the following 6 FFs/Latches, which will be removed : <frame_buf_10> <frame_buf_11> <frame_buf_12> <frame_buf_13> <frame_buf_14> <frame_buf_15> 
-INFO:Xst:2261 - The FF/Latch <frame_buf_9> in Unit <frame_out> is equivalent to the following 6 FFs/Latches, which will be removed : <frame_buf_10> <frame_buf_11> <frame_buf_12> <frame_buf_13> <frame_buf_14> <frame_buf_15> 
 WARNING:Xst:1426 - The value init of the FF/Latch uart/speed_rx/bps_para_2_1 hinder the constant cleaning in the block apollo_top.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch uart/speed_rx/bps_para_2_4 hinder the constant cleaning in the block apollo_top.
@@ -1086,8 +1108,7 @@ WARNING:Xst:1426 - The value init of the FF/Latch uart/speed_tx/bps_para_2_7 hin
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch uart/speed_tx/bps_para_2_8 hinder the constant cleaning in the block apollo_top.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1710 - FF/Latch <receiver/frame_out/frame_buf_8> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/uart_ctrl_r_2> (without init value) has a constant value of 1 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uart/speed_rx/uart_ctrl_r_2> (without init value) has a constant value of 1 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/uart_ctrl_r_1> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/uart_ctrl_r_0> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/bps_para_2_2> has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
@@ -1109,6 +1130,15 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart/speed_tx/bps_p
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart/speed_tx/bps_para_2_12> has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <ad_driver/rdy> of sequential type is unconnected in block <apollo_top>.
 WARNING:Xst:2677 - Node <segment/dpy_rssi/Srst_n> of sequential type is unconnected in block <apollo_top>.
+WARNING:Xst:2677 - Node <receiver/get_rssi/rssi_aver_rdy> of sequential type is unconnected in block <apollo_top>.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_13> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_14> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_15> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_16> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_17> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_18> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_19> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/frame_out/ocnt_20> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_5> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_6> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_7> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
@@ -1117,15 +1147,15 @@ WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_9> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_10> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_11> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_12> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_13> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_14> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_15> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_16> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_17> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_18> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_19> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_20> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_21> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_20> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_19> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_18> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_17> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_16> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_15> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_14> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <receiver/get_bit/cnt_13> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/cnt_9> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/cnt_10> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart/speed_rx/cnt_11> (without init value) has a constant value of 0 in block <apollo_top>. This FF/Latch will be trimmed during the optimization process.
@@ -1139,7 +1169,7 @@ INFO:Xst:2261 - The FF/Latch <uart/speed_tx/bps_para_2_8> in Unit <apollo_top> i
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block apollo_top, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block apollo_top, actual ratio is 6.
 FlipFlop receiver/get_bit/bit_syn/U4/enable has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -1152,8 +1182,8 @@ Unit <apollo_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 524
- Flip-Flops                                            : 524
+# Registers                                            : 577
+ Flip-Flops                                            : 577
 
 =========================================================================
 
@@ -1176,36 +1206,36 @@ Top Level Output File Name         : apollo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 683
+# BELS                             : 793
 #      GND                         : 3
-#      INV                         : 21
-#      LUT1                        : 6
-#      LUT2                        : 120
-#      LUT3                        : 123
-#      LUT4                        : 98
-#      LUT5                        : 42
-#      LUT6                        : 130
-#      MUXCY                       : 76
+#      INV                         : 12
+#      LUT1                        : 17
+#      LUT2                        : 134
+#      LUT3                        : 85
+#      LUT4                        : 157
+#      LUT5                        : 43
+#      LUT6                        : 128
+#      MUXCY                       : 112
 #      MUXF7                       : 2
 #      VCC                         : 3
-#      XORCY                       : 59
-# FlipFlops/Latches                : 540
+#      XORCY                       : 97
+# FlipFlops/Latches                : 593
 #      FD                          : 2
-#      FDC                         : 117
-#      FDCE                        : 293
+#      FDC                         : 119
+#      FDCE                        : 348
 #      FDCE_1                      : 2
 #      FDE                         : 95
 #      FDP                         : 2
-#      FDPE                        : 10
+#      FDPE                        : 6
 #      FDR                         : 5
 #      FDRE                        : 14
 # Shift Registers                  : 24
 #      SRLC32E                     : 24
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 16
+# IO Buffers                       : 18
 #      IBUF                        : 11
-#      OBUF                        : 5
+#      OBUF                        : 7
 
 Device utilization summary:
 ---------------------------
@@ -1214,22 +1244,22 @@ Selected Device : 6slx25ftg256-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             540  out of  30064     1%  
- Number of Slice LUTs:                  564  out of  15032     3%  
-    Number used as Logic:               540  out of  15032     3%  
+ Number of Slice Registers:             593  out of  30064     1%  
+ Number of Slice LUTs:                  600  out of  15032     3%  
+    Number used as Logic:               576  out of  15032     3%  
     Number used as Memory:               24  out of   3664     0%  
        Number used as SRL:               24
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    720
-   Number with an unused Flip Flop:     180  out of    720    25%  
-   Number with an unused LUT:           156  out of    720    21%  
-   Number of fully used LUT-FF pairs:   384  out of    720    53%  
-   Number of unique control sets:        37
+ Number of LUT Flip Flop pairs used:    781
+   Number with an unused Flip Flop:     188  out of    781    24%  
+   Number with an unused LUT:           181  out of    781    23%  
+   Number of fully used LUT-FF pairs:   412  out of    781    52%  
+   Number of unique control sets:        42
 
 IO Utilization: 
- Number of IOs:                          16
- Number of bonded IOBs:                  16  out of    186     8%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    186     9%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
@@ -1255,7 +1285,7 @@ Clock Information:
 ----------------------------------------------------------------------+----------------------------------------------------+-------+
 Clock Signal                                                          | Clock buffer(FF name)                              | Load  |
 ----------------------------------------------------------------------+----------------------------------------------------+-------+
-recv_clk(controller/recv_clk1:O)                                      | BUFG(*)(ad_driver/cnt_3)                           | 302   |
+recv_clk(controller/recv_clk1:O)                                      | BUFG(*)(ad_driver/cnt_3)                           | 355   |
 clk                                                                   | IBUF+BUFG                                          | 222   |
 receiver/get_bit/clk_8th                                              | BUFG                                               | 30    |
 receiver/get_bit/bit_syn/behind(receiver/get_bit/bit_syn/U1/behind1:O)| NONE(*)(receiver/get_bit/bit_syn/U2/behind_count_3)| 5     |
@@ -1276,7 +1306,7 @@ Speed Grade: -3
 
    Minimum period: 7.265ns (Maximum Frequency: 137.642MHz)
    Minimum input arrival time before clock: 5.194ns
-   Maximum output required time after clock: 3.732ns
+   Maximum output required time after clock: 6.749ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1285,53 +1315,52 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'recv_clk'
-  Clock period: 5.594ns (frequency: 178.778MHz)
-  Total number of paths / destination ports: 2899 / 524
+  Clock period: 4.757ns (frequency: 210.218MHz)
+  Total number of paths / destination ports: 3818 / 628
 -------------------------------------------------------------------------
-Delay:               5.594ns (Levels of Logic = 3)
-  Source:            receiver/frame_out/ocnt_0 (FF)
-  Destination:       receiver/frame_out/dout_r_7 (FF)
+Delay:               4.757ns (Levels of Logic = 2)
+  Source:            receiver/frame_out/ocnt_7 (FF)
+  Destination:       receiver/frame_out/frame_buf_63 (FF)
   Source Clock:      recv_clk rising
   Destination Clock: recv_clk rising
 
-  Data Path: receiver/frame_out/ocnt_0 to receiver/frame_out/dout_r_7
+  Data Path: receiver/frame_out/ocnt_7 to receiver/frame_out/frame_buf_63
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.447   0.981  receiver/frame_out/ocnt_0 (receiver/frame_out/ocnt_0)
-     LUT6:I0->O            2   0.203   0.981  receiver/frame_out/drdy_r_PWR_28_o_MUX_385_o11 (receiver/frame_out/drdy_r_PWR_28_o_MUX_385_o1)
-     LUT6:I0->O            3   0.203   0.651  receiver/frame_out/drdy_r_PWR_28_o_MUX_385_o (receiver/frame_out/drdy_r_PWR_28_o_MUX_385_o)
-     LUT2:I1->O           58   0.205   1.600  receiver/frame_out/_n0088_inv1 (receiver/frame_out/_n0088_inv)
+     FDC:C->Q              4   0.447   1.028  receiver/frame_out/ocnt_7 (receiver/frame_out/ocnt_7)
+     LUT6:I1->O            2   0.203   0.961  receiver/frame_out/GND_36_o_GND_36_o_equal_2_o<20>1 (receiver/frame_out/GND_36_o_GND_36_o_equal_2_o<20>)
+     LUT6:I1->O           57   0.203   1.593  receiver/frame_out/_n0074_inv1 (receiver/frame_out/_n0074_inv)
      FDCE:CE                   0.322          receiver/frame_out/frame_buf_1
     ----------------------------------------
-    Total                      5.594ns (1.380ns logic, 4.214ns route)
+    Total                      4.757ns (1.175ns logic, 3.582ns route)
                                        (24.7% logic, 75.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.604ns (frequency: 178.446MHz)
-  Total number of paths / destination ports: 5540 / 346
+  Clock period: 5.807ns (frequency: 172.210MHz)
+  Total number of paths / destination ports: 5483 / 346
 -------------------------------------------------------------------------
-Delay:               5.604ns (Levels of Logic = 5)
-  Source:            segment/my_binary2bcd/bcd1_1 (FF)
-  Destination:       segment/my_binary2bcd/add3_en (FF)
+Delay:               5.807ns (Levels of Logic = 5)
+  Source:            controller/out_cnt_0 (FF)
+  Destination:       controller/tx_write_r (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: segment/my_binary2bcd/bcd1_1 to segment/my_binary2bcd/add3_en
+  Data Path: controller/out_cnt_0 to controller/tx_write_r
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              8   0.447   1.147  segment/my_binary2bcd/bcd1_1 (segment/my_binary2bcd/bcd1_1)
-     LUT6:I1->O            1   0.203   0.684  segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o1 (segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o1)
-     LUT6:I4->O            1   0.203   0.684  segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o4_SW0 (N81)
-     LUT6:I4->O            1   0.203   0.944  segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o4 (segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o5)
-     LUT6:I0->O            1   0.203   0.580  segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o5 (segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o6)
-     LUT6:I5->O            1   0.205   0.000  segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o6 (segment/my_binary2bcd/n_state[5]_add3_en_Select_53_o)
-     FDC:D                     0.102          segment/my_binary2bcd/add3_en
+     FDCE:C->Q             2   0.447   0.961  controller/out_cnt_0 (controller/out_cnt_0)
+     LUT5:I0->O            3   0.203   0.995  controller/state_FSM_FFd3-In61 (controller/state_FSM_FFd3-In6)
+     LUT5:I0->O            3   0.203   0.879  controller/out_cnt[15]_GND_13_o_equal_14_o<15>11 (controller/out_cnt[15]_GND_13_o_equal_14_o<15>1)
+     LUT6:I3->O            2   0.205   0.721  controller/out_cnt[15]_GND_13_o_equal_15_o<15> (controller/out_cnt[15]_GND_13_o_equal_15_o)
+     LUT4:I2->O            1   0.203   0.684  controller/state[3]_tx_write_r_Select_77_o_SW0 (N10)
+     LUT5:I3->O            1   0.203   0.000  controller/state[3]_tx_write_r_Select_77_o (controller/state[3]_tx_write_r_Select_77_o)
+     FDC:D                     0.102          controller/tx_write_r
     ----------------------------------------
-    Total                      5.604ns (1.566ns logic, 4.038ns route)
-                                       (27.9% logic, 72.1% route)
+    Total                      5.807ns (1.566ns logic, 4.241ns route)
+                                       (27.0% logic, 73.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'receiver/get_bit/clk_8th'
@@ -1434,48 +1463,54 @@ Offset:              5.194ns (Levels of Logic = 2)
     ----------------------------------------  ------------
      IBUF:I->O            37   1.222   1.362  rst_n_IBUF (rst_n_IBUF)
      INV:I->O            137   0.206   1.974  uart/uart_tx/rst_n_inv1_INV_0 (controller/rst_n_inv)
-     FDPE:PRE                  0.430          controller/level_r_0
+     FDCE:CLR                  0.430          controller/level_r_0
     ----------------------------------------
     Total                      5.194ns (1.858ns logic, 3.336ns route)
                                        (35.8% logic, 64.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 15 / 5
 -------------------------------------------------------------------------
-Offset:              3.732ns (Levels of Logic = 1)
-  Source:            segment/dpy_rssi/hc595x2/Sck (FF)
-  Destination:       Sftclk (PAD)
+Offset:              6.665ns (Levels of Logic = 4)
+  Source:            controller/level_r_5 (FF)
+  Destination:       test1 (PAD)
   Source Clock:      clk rising
 
-  Data Path: segment/dpy_rssi/hc595x2/Sck to Sftclk
+  Data Path: controller/level_r_5 to test1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             5   0.447   0.714  segment/dpy_rssi/hc595x2/Sck (segment/dpy_rssi/hc595x2/Sck)
-     OBUF:I->O                 2.571          Sftclk_OBUF (Sftclk)
+     FDPE:C->Q             3   0.447   0.995  controller/level_r_5 (controller/level_r_5)
+     LUT6:I1->O            1   0.203   0.580  receiver/bdata22 (receiver/bdata21)
+     LUT6:I5->O            6   0.205   0.745  receiver/bdata24 (receiver/bdata23)
+     LUT4:I3->O            5   0.205   0.714  receiver/bdata25 (test1_OBUF)
+     OBUF:I->O                 2.571          test1_OBUF (test1)
     ----------------------------------------
-    Total                      3.732ns (3.018ns logic, 0.714ns route)
-                                       (80.9% logic, 19.1% route)
+    Total                      6.665ns (3.631ns logic, 3.034ns route)
+                                       (54.5% logic, 45.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'recv_clk'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 13 / 3
 -------------------------------------------------------------------------
-Offset:              3.668ns (Levels of Logic = 1)
-  Source:            ad_driver/cnt_3 (FF)
-  Destination:       out_ad_clk (PAD)
+Offset:              6.749ns (Levels of Logic = 4)
+  Source:            ad_driver/dout_5 (FF)
+  Destination:       test1 (PAD)
   Source Clock:      recv_clk rising
 
-  Data Path: ad_driver/cnt_3 to out_ad_clk
+  Data Path: ad_driver/dout_5 to test1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.650  ad_driver/cnt_3 (ad_driver/cnt_3)
-     OBUF:I->O                 2.571          out_ad_clk_OBUF (out_ad_clk)
+     FDCE:C->Q             5   0.447   1.079  ad_driver/dout_5 (ad_driver/dout_5)
+     LUT6:I0->O            1   0.203   0.580  receiver/bdata22 (receiver/bdata21)
+     LUT6:I5->O            6   0.205   0.745  receiver/bdata24 (receiver/bdata23)
+     LUT4:I3->O            5   0.205   0.714  receiver/bdata25 (test1_OBUF)
+     OBUF:I->O                 2.571          test1_OBUF (test1)
     ----------------------------------------
-    Total                      3.668ns (3.018ns logic, 0.650ns route)
-                                       (82.3% logic, 17.7% route)
+    Total                      6.749ns (3.631ns logic, 3.118ns route)
+                                       (53.8% logic, 46.2% route)
 
 =========================================================================
 
@@ -1487,8 +1522,8 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.604|         |         |         |
-recv_clk       |    1.473|         |         |         |
+clk            |    5.807|         |         |         |
+recv_clk       |    1.436|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock receiver/get_bit/bit_syn/ahead
@@ -1496,7 +1531,7 @@ Clock to Setup on destination clock receiver/get_bit/bit_syn/ahead
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-clk                           |    3.770|         |         |         |
+clk                           |    3.775|         |         |         |
 receiver/get_bit/bit_syn/ahead|    1.714|         |         |         |
 receiver/get_bit/clk_8th      |    2.289|    1.979|         |         |
 ------------------------------+---------+---------+---------+---------+
@@ -1506,7 +1541,7 @@ Clock to Setup on destination clock receiver/get_bit/bit_syn/behind
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-clk                            |    3.770|         |         |         |
+clk                            |    3.775|         |         |         |
 receiver/get_bit/bit_syn/behind|    1.714|         |         |         |
 receiver/get_bit/clk_8th       |    2.289|    1.979|         |         |
 -------------------------------+---------+---------+---------+---------+
@@ -1516,11 +1551,11 @@ Clock to Setup on destination clock receiver/get_bit/clk_8th
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-clk                            |    5.628|         |    3.770|         |
+clk                            |    5.660|         |    3.775|         |
 receiver/get_bit/bit_syn/ahead |    3.317|         |    4.153|         |
 receiver/get_bit/bit_syn/behind|    3.220|         |    4.056|         |
 receiver/get_bit/clk_8th       |    3.613|    3.256|    4.093|         |
-recv_clk                       |    5.681|         |         |         |
+recv_clk                       |    5.743|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock recv_clk
@@ -1528,22 +1563,22 @@ Clock to Setup on destination clock recv_clk
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-clk                     |    3.770|         |         |         |
+clk                     |    3.775|         |         |         |
 receiver/get_bit/clk_8th|    2.692|         |         |         |
-recv_clk                |    5.594|         |         |         |
+recv_clk                |    4.757|         |         |         |
 ------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.99 secs
+Total CPU time to Xst completion: 11.71 secs
  
 --> 
 
-Total memory usage is 295424 kilobytes
+Total memory usage is 296556 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  152 (   0 filtered)
-Number of infos    :   31 (   0 filtered)
+Number of warnings :  157 (   0 filtered)
+Number of infos    :   25 (   0 filtered)
 

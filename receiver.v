@@ -25,7 +25,9 @@ module receiver(
     input [7:0] din,
     input den,
     output [7:0] dout,
-    output drdy
+    output drdy,
+	 output test1,
+	 output test2
     );
 
 parameter IDLE = 0;
@@ -43,6 +45,8 @@ get_bit get_bit(	.clk(clk),
 				.dout(bout),
 				.drdy(brdy));
 
+wire [7:0] rssi;
+wire rssi_rdy;
 get_rssi get_rssi(	.clk(clk),
 							.rst_n(rst_n),
 							.din(din),
@@ -70,10 +74,10 @@ get_data get_data(	.clk(clk),
 							.drdy(data_rdy));
 
 //-------------------------------------------
-reg[8:0] data_rdy_r;
+reg[20:0] data_rdy_r;
 always @ (posedge clk or negedge rst_n)
 	if (!rst_n) data_rdy_r <= 0;
-	else data_rdy_r <= {data_rdy_r[7:0], data_rdy};
+	else data_rdy_r <= {data_rdy_r[19:0], data_rdy};
 
 frame_out frame_out(	.clk(clk),
 							.rst_n(rst_n),
@@ -86,4 +90,6 @@ frame_out frame_out(	.clk(clk),
 							.dout(dout),
 							.drdy(drdy));				
 
+assign test1 = bdata;
+assign test2 = brdy;
 endmodule

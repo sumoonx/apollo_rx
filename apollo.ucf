@@ -35,3 +35,7 @@ NET "SDout"  		LOC = J14	| IOSTANDARD = LVCMOS33;
 #uart
 NET "rs232_tx" 	LOC = M14  | IOSTANDARD  = LVTTL;
 NET "rs232_rx" 	LOC = N14  | IOSTANDARD  = LVTTL;
+
+#≤‚ ‘
+NET "test1" 	LOC = P6  | IOSTANDARD  = LVTTL;
+NET "test2" 	LOC = P7  | IOSTANDARD  = LVTTL;
