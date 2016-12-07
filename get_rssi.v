@@ -29,105 +29,81 @@ module get_rssi(
    output drdy
    );
 
+parameter IDLE = 0;
+parameter CAL = 1;
+parameter OUT = 2;
+
 //-------------------------------------------
+/*
 wire[7:0] d_delay;
 delay32 delay(	.clk(clk),
 				.ce(ben),
 				.d(din),
 				.q(d_delay));
+*/
 
-parameter IDLE = 0;
-parameter CAL = 1;
-parameter OUT = 2;
+reg[255:0] d_buf;
+always @ (posedge clk or negedge rst_n)
+	if(!rst_n) d_buf <= 0;
+	else if(den) d_buf <= {d_buf[247:0], din[7:0]};
+
+wire[7:0] d_delay;
+assign d_delay = d_buf[255:248];
 
 //-----------------------------------------------
-assign low = (~bin) & ben;
-
-reg[1:0] lstate;
-reg[15:0] lsum;
-reg laver_rdy;
+reg[1:0] state;
+reg[15:0] sum;
+reg aver_rdy;
 always @ (posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
-		lstate <= IDLE;
-		lsum <= 0;
-		laver_rdy <= 1'b0;
+		state <= IDLE;
+		sum <= 0;
+		aver_rdy <= 1'b0;
 	end
 	else begin
-		case(lstate)
+		case(state)
 			IDLE: begin
-				laver_rdy <= 1'b0;
-				if (low) begin
-					lsum <= lsum - d_delay;
-					lstate <= CAL;
+				aver_rdy <= 1'b0;
+				if (den) begin
+					sum <= sum - d_delay;
+					state <= CAL;
 					end
-				else lstate <= IDLE;
+				else state <= IDLE;
 				end
 			CAL: begin
-				lsum <= lsum + din;
-				lstate <= OUT;
+				sum <= sum + din;
+				aver_rdy <= 1'b1;
+				state <= IDLE;
 				end
 			OUT: begin
-				laver_rdy <= 1'b1;
-				lstate <= IDLE;
+				state <= IDLE;
 				end
+			default: state <= IDLE;
 		endcase
 	end
 end
 
-wire[7:0] laver;
-assign laver = lsum[13:6];
-//-----------------------------------------------
-assign high = bin & ben;
+reg[7:0] aver;
+always @ (posedge clk or negedge rst_n)
+	if(!rst_n) aver <= 0;
+	else if(aver_rdy) aver <= sum[13:6];
 
-reg[1:0] hstate;
-reg[15:0] hsum;
-reg haver_rdy;
-always @ (posedge clk or negedge rst_n) begin
-	if(!rst_n) begin
-		hstate <= IDLE;
-		hsum <= 0;
-		haver_rdy <= 1'b0;
-	end
-	else begin
-		case(hstate)
-			IDLE: begin
-				haver_rdy <= 1'b0;
-				if (high) begin
-					hsum <= hsum - d_delay;
-					hstate <= CAL;
-					end
-				else hstate <= IDLE;
-				end
-			CAL: begin
-				hsum <= hsum + din;
-				hstate <= OUT;
-				end
-			OUT: begin
-				haver_rdy <= 1'b1;
-				hstate <= IDLE;
-				end
-		endcase
-	end
-end
-
-wire[7:0] haver;
-assign haver = hsum[13:0];
 //----------------------------------------------
 reg[7:0] llv;
 always @ (posedge clk or negedge rst_n)
 	if(!rst_n) llv <= 0;
-	else if(laver_rdy) llv <= laver;
+	else if(ben == 1 && bin == 0) llv <= aver;
 
 reg[7:0] hlv;
 always @ (posedge clk or negedge rst_n)
 	if(!rst_n) hlv <= 0;
-	else if(haver_rdy) hlv <= haver;
+	else if(ben == 1 && bin == 1) hlv <= aver;
 
 //delay the average signal for one clk cycle
-reg haver_rdy_r;
+reg ben_r;
 always @ (posedge clk or negedge rst_n)
-	if(!rst_n) haver_rdy_r <= 1'b0;
-	else haver_rdy_r <= haver_rdy;
+	if(!rst_n) ben_r <= 1'b0;
+	else ben_r <= ben;
 
 reg[7:0] rssi;
 reg rssi_rdy;
@@ -136,18 +112,28 @@ always @ (posedge clk or negedge rst_n)
 		rssi <= 0;
 		rssi_rdy <= 1'b0;
 	end
-	else if(haver_rdy_r) begin
+	else if(ben_r && bin == 1) begin
 		rssi <= hlv - llv;
 		rssi_rdy <= 1'b1;
 	end
 	else rssi_rdy <= 1'b0;
 
 //----------------------------------------------------
+/*
 wire[7:0] rssi_delay;
 delay_64 delay_64(	.clk(clk),
 							.ce(rssi_rdy),
 							.d(rssi),
 							.q(rssi_delay));
+*/
+
+reg[511:0] rssi_buf;
+always @ (posedge clk or negedge rst_n)
+	if(!rst_n) rssi_buf <= 0;
+	else if(rssi_rdy) rssi_buf <= {rssi_buf[503:0], rssi[7:0]};
+
+wire[7:0] rssi_delay;
+assign rssi_delay = rssi_buf[511:504];
 
 reg[1:0] rstate;
 reg[15:0] rsum;
@@ -170,12 +156,14 @@ always @ (posedge clk or negedge rst_n) begin
 				end
 			CAL: begin
 				rsum <= rsum + rssi;
-				rstate <= OUT;
+				rssi_aver_rdy <= 1'b1;
+				rstate <= IDLE;
 				end
 			OUT: begin
 				rssi_aver_rdy <= 1'b1;
 				rstate <= IDLE;
 				end
+			default: rstate <= IDLE;
 		endcase
 	end
 end

@@ -37,16 +37,16 @@ Setup/Hold to clock clk
              |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 -------------+------------+------------+------------+------------+------------------+--------+
-in_ad_data<0>|   -3.018(R)|      FAST  |    5.609(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<1>|   -2.770(R)|      FAST  |    5.286(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<2>|   -3.181(R)|      FAST  |    5.806(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<3>|   -3.206(R)|      FAST  |    5.819(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<4>|   -3.099(R)|      FAST  |    5.697(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<5>|   -2.565(R)|      FAST  |    5.038(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<6>|   -2.773(R)|      FAST  |    5.255(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-in_ad_data<7>|   -2.844(R)|      FAST  |    5.351(R)|      SLOW  |recv_clk_BUFG     |   0.000|
-rs232_rx     |    2.843(R)|      SLOW  |   -0.305(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-rst_n        |    4.515(R)|      SLOW  |    0.517(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+in_ad_data<0>|   -2.753(R)|      FAST  |    5.276(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<1>|   -2.882(R)|      FAST  |    5.407(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<2>|   -3.104(R)|      FAST  |    5.649(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<3>|   -3.207(R)|      FAST  |    5.804(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<4>|   -3.125(R)|      FAST  |    5.718(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<5>|   -2.498(R)|      FAST  |    4.876(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<6>|   -2.787(R)|      FAST  |    5.254(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+in_ad_data<7>|   -2.652(R)|      FAST  |    5.047(R)|      SLOW  |recv_clk_BUFG     |   0.000|
+rs232_rx     |    2.533(R)|      SLOW  |   -0.216(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+rst_n        |    4.892(R)|      SLOW  |    0.958(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
 -------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -54,14 +54,14 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-Lchclk      |         8.260(R)|      SLOW  |         4.540(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-SDout       |         8.217(R)|      SLOW  |         4.525(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-Sftclk      |         8.975(R)|      SLOW  |         4.974(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-out_ad_clk  |        14.034(R)|      SLOW  |         8.480(R)|      FAST  |recv_clk_BUFG     |   0.000|
-rs232_tx    |        10.939(R)|      SLOW  |         6.196(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-test1       |        15.257(R)|      SLOW  |         8.152(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
-            |        19.917(R)|      SLOW  |        11.632(R)|      FAST  |recv_clk_BUFG     |   0.000|
-test2       |        18.215(R)|      SLOW  |        11.045(R)|      FAST  |recv_clk_BUFG     |   0.000|
+Lchclk      |         8.527(R)|      SLOW  |         4.713(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+SDout       |         7.772(R)|      SLOW  |         4.258(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+Sftclk      |         8.686(R)|      SLOW  |         4.810(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+out_ad_clk  |        14.244(R)|      SLOW  |         8.633(R)|      FAST  |recv_clk_BUFG     |   0.000|
+rs232_tx    |        10.721(R)|      SLOW  |         6.100(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+test1       |        15.789(R)|      SLOW  |         7.968(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+            |        20.135(R)|      SLOW  |        11.601(R)|      FAST  |recv_clk_BUFG     |   0.000|
+test2       |        17.180(R)|      SLOW  |        10.384(R)|      FAST  |recv_clk_BUFG     |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -69,18 +69,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.425|         |         |         |
+clk            |    8.126|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Dec 05 20:06:21 2016 
+Analysis completed Wed Dec 07 14:19:15 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 268 MB
+Peak Memory Usage: 267 MB
 
 
 

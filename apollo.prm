@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 promgen -w -p mcs -c FF -o E:\Workspace\CompanyProjects\VLC\apollo_rx//apollo -s 8192 -u 0000 E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.bit -spi 
 
-PROM E:\Workspace\CompanyProjects\VLC\apollo_rx\apollo.prm map: Mon Dec 05 20:14:44 2016
+PROM E:\Workspace\CompanyProjects\VLC\apollo_rx\apollo.prm map: Wed Dec 07 15:10:15 2016
 
 Calculating PROM checksum with fill value ff
 
@@ -11,7 +11,7 @@ Format        Mcs86 (32-bit)
 Size          8192K
 PROM start    0000:0000
 PROM end      007f:ffff
-PROM checksum 7365b1cc
+PROM checksum 736656d7
 
         Addr1        Addr2                     Date File(s)
-    0000:0000    000c:3ab5     Dec 05 20:06:30 2016 E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.bit
+    0000:0000    000c:3ab5     Dec 07 14:19:23 2016 E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.bit

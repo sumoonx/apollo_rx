@@ -6,8 +6,6 @@ Command Line: D:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 xc6slx25-ftg256-3 apollo_top.ngc apollo_top.ngd
 
 Reading NGO file "E:/Workspace/CompanyProjects/VLC/apollo_rx/apollo_top.ngc" ...
-Loading design module "ipcore_dir/delay32.ngc"...
-Loading design module "ipcore_dir/delay_64.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,7 +27,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 190248 kilobytes
+Total memory usage is 190252 kilobytes
 
 Writing NGD file "apollo_top.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

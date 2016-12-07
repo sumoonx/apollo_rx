@@ -35,9 +35,6 @@
 <msg type="warning" file="HDLCompiler" num="634" delta="old" >"E:\Workspace\CompanyProjects\VLC\apollo_rx\bit_synchronize.v" Line 34: Net &lt;<arg fmt="%s" index="1">clk_low1</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Workspace\CompanyProjects\VLC\apollo_rx\get_rssi.v" Line 114: Result of <arg fmt="%d" index="1">14</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Workspace\CompanyProjects\VLC\apollo_rx\receiver.v" Line 57: Assignment to <arg fmt="%s" index="1">rssi_rdy</arg> ignored, since the identifier is never used
 </msg>
 
@@ -77,9 +74,6 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">den</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
@@ -107,13 +101,13 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">n_state_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">my_binary2bcd</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
@@ -152,13 +146,13 @@
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0040</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_rdy_r_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">receiver</arg>&gt;.
@@ -224,37 +218,13 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">dat_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">lsum_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rsum_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">lsum_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sum_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">rsum_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hsum_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sum_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">get_rssi</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">frame_buf_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">frame_out</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -440,9 +410,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">uart/speed_tx/bps_para_2_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">apollo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ad_driver/rdy</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">apollo_top</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">segment/dpy_rssi/Srst_n</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">apollo_top</arg>&gt;.
 </msg>
 
@@ -554,7 +521,7 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">uart/speed_tx/bps_para_2_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">apollo_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">9 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;uart/speed_tx/bps_para_2_7&gt; &lt;uart/speed_tx/bps_para_2_5&gt; &lt;uart/speed_tx/bps_para_2_4&gt; &lt;uart/speed_tx/bps_para_2_1&gt; &lt;uart/speed_rx/bps_para_2_8&gt; &lt;uart/speed_rx/bps_para_2_7&gt; &lt;uart/speed_rx/bps_para_2_5&gt; &lt;uart/speed_rx/bps_para_2_4&gt; &lt;uart/speed_rx/bps_para_2_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="741" delta="new" >HDL ADVISOR - A <arg fmt="%d" index="1">9</arg>-bit shift register was found for signal &lt;<arg fmt="%s" index="2">receiver/data_rdy_r_8</arg>&gt; and currently occupies <arg fmt="%d" index="3">9</arg> logic cells (<arg fmt="%d" index="4">4</arg> slices). Removing the set/reset logic would take advantage of SRL<arg fmt="%d" index="5">32</arg> (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+<msg type="info" file="Xst" num="741" delta="old" >HDL ADVISOR - A <arg fmt="%d" index="1">9</arg>-bit shift register was found for signal &lt;<arg fmt="%s" index="2">receiver/data_rdy_r_8</arg>&gt; and currently occupies <arg fmt="%d" index="3">9</arg> logic cells (<arg fmt="%d" index="4">4</arg> slices). Removing the set/reset logic would take advantage of SRL<arg fmt="%d" index="5">32</arg> (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
